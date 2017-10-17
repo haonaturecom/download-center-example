@@ -212,6 +212,304 @@
               "body": "{\"authenticated\":true}"
             }
           ]
+        },
+        {
+          "_postman_id": "2483749-3bb0d4c2-f232-307d-0595-db9f5bca2742",
+          "name": "https://app.asana.com/app/asana/-/socket?session_id=454916017943985&user_id=324467577239455&count=335&idle=1&https://haonature.com",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "haonatu1",
+                "password": "nectw721*",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": {
+              "raw": "https://app.asana.com/app/asana/-/socket?session_id=454916017943985&user_id=324467577239455&count=335&idle=1&https://haonature.com",
+              "protocol": "https",
+              "auth": {},
+              "host": [
+                "app",
+                "asana",
+                "com"
+              ],
+              "path": [
+                "app",
+                "asana",
+                "-",
+                "socket"
+              ],
+              "query": [
+                {
+                  "key": "session_id",
+                  "value": "454916017943985",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "user_id",
+                  "value": "324467577239455",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "count",
+                  "value": "335",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "idle",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "https://haonature.com",
+                  "value": "",
+                  "equals": false,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Asana-Release-Revision",
+                "value": "20171016_233236_f3d68c3e722c6e2cf6fd0d44a1b14e3208f3c5ca",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "https://app.asana.com",
+                "description": ""
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "text/plain",
+                "description": ""
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "description": ""
+              },
+              {
+                "key": "X-Asana-Ticket",
+                "value": "d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26",
+                "description": ""
+              },
+              {
+                "key": "X-Asana-Session-Ticket",
+                "value": "3a302261f5416e05c4c0828b4ec7a221",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "description": ""
+              },
+              {
+                "key": "DNT",
+                "value": "1",
+                "description": ""
+              },
+              {
+                "key": "Referer",
+                "value": "https://app.asana.com/0/dashboard/324467577239467",
+                "description": ""
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "description": ""
+              },
+              {
+                "key": "Accept-Language",
+                "value": "zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4",
+                "description": ""
+              },
+              {
+                "key": "Cookie",
+                "value": "TooBusyRedirectCount=0; xsrf_token=9d3a7ba3b89d97b82c3545487ec9b981%3A1508216838075; google_auth=1508216854307; google_email=twcctz500%40haonature.com; user=324467577239455; auth_token=ba10c31fbf464debc30972b95b5b8e23; ticket=d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26; is_logged_in=true; xsrf_string_263415073d13b1d326c8b4e1b39cf03d=1508216855587; TooBusyRedirectCount=0; p=0; _ga=GA1.2.1011229085.1508216860; xsrf_string_43e3ef5532a4ff6bd75f8d9785e16f30=1508217073923; xsrf_string_e4ce4a7340c5468fa60eeb1bbffa6e68=1508217074425; xsrf_string_4962fec5d6ce57706661a72357e648c0=1508217074471; after_verification_dialog=EMAIL_DROPBOX; asana_orig_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; asana_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; luna_db_server_query_string=userId=324467577239455&shardId=324467577239463; server=prod-ws034.ec2|WeWVo",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic aGFvbmF0dTE6bmVjdHc3MjEq",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"S\":\"C\",\"C\":\"SyncRequestMessage\",\"D\":{\"actions\":{\"S\":\"C\",\"C\":\"Array\",\"D\":[]},\"sync_count\":327,\"is_overlapping\":false,\"session_sync_info\":null}}"
+            },
+            "description": "https://haonature.com"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2483749-d284eef0-e7af-ed5a-f36b-5aba0a388d49",
+          "name": "https://app.asana.com/app/asana/-/socket?session_id=454916017943985&user_id=324467577239455&count=335&idle=1&https://haonature.com",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "haonatu1",
+                "password": "nectw721*",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": {
+              "raw": "https://app.asana.com/app/asana/-/socket?session_id=454916017943985&user_id=324467577239455&count=335&idle=1&https://haonature.com",
+              "protocol": "https",
+              "auth": {},
+              "host": [
+                "app",
+                "asana",
+                "com"
+              ],
+              "path": [
+                "app",
+                "asana",
+                "-",
+                "socket"
+              ],
+              "query": [
+                {
+                  "key": "session_id",
+                  "value": "454916017943985",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "user_id",
+                  "value": "324467577239455",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "count",
+                  "value": "335",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "idle",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "https://haonature.com",
+                  "value": "",
+                  "equals": false,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Asana-Release-Revision",
+                "value": "20171016_233236_f3d68c3e722c6e2cf6fd0d44a1b14e3208f3c5ca",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "https://app.asana.com",
+                "description": ""
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "text/plain",
+                "description": ""
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "description": ""
+              },
+              {
+                "key": "X-Asana-Ticket",
+                "value": "d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26",
+                "description": ""
+              },
+              {
+                "key": "X-Asana-Session-Ticket",
+                "value": "3a302261f5416e05c4c0828b4ec7a221",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "description": ""
+              },
+              {
+                "key": "DNT",
+                "value": "1",
+                "description": ""
+              },
+              {
+                "key": "Referer",
+                "value": "https://app.asana.com/0/dashboard/324467577239467",
+                "description": ""
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "description": ""
+              },
+              {
+                "key": "Accept-Language",
+                "value": "zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4",
+                "description": ""
+              },
+              {
+                "key": "Cookie",
+                "value": "TooBusyRedirectCount=0; xsrf_token=9d3a7ba3b89d97b82c3545487ec9b981%3A1508216838075; google_auth=1508216854307; google_email=twcctz500%40haonature.com; user=324467577239455; auth_token=ba10c31fbf464debc30972b95b5b8e23; ticket=d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26; is_logged_in=true; xsrf_string_263415073d13b1d326c8b4e1b39cf03d=1508216855587; TooBusyRedirectCount=0; p=0; _ga=GA1.2.1011229085.1508216860; xsrf_string_43e3ef5532a4ff6bd75f8d9785e16f30=1508217073923; xsrf_string_e4ce4a7340c5468fa60eeb1bbffa6e68=1508217074425; xsrf_string_4962fec5d6ce57706661a72357e648c0=1508217074471; after_verification_dialog=EMAIL_DROPBOX; asana_orig_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; asana_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; luna_db_server_query_string=userId=324467577239455&shardId=324467577239463; server=prod-ws034.ec2|WeWVo",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic aGFvbmF0dTE6bmVjdHc3MjEq",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"S\":\"C\",\"C\":\"SyncRequestMessage\",\"D\":{\"actions\":{\"S\":\"C\",\"C\":\"Array\",\"D\":[]},\"sync_count\":327,\"is_overlapping\":false,\"session_sync_info\":null}}"
+            },
+            "description": "https://haonature.com"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2483749-4e9ee2e4-e09c-57e0-5a1b-0ff26c21b60e",
+          "name": "https://haonature.com",
+          "request": {
+            "url": "",
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": "https://haonature.com"
+          },
+          "response": []
         }
       ]
     },
