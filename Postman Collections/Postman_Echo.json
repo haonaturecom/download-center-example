@@ -39,7 +39,6 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/digest-auth",
             "method": "GET",
             "header": [],
             "body": {
@@ -72,6 +71,7 @@
                 }
               ]
             },
+            "url": "https://postman-echo.com/digest-auth",
             "description": "Performing a simple `GET` request to this endpoint returns status code `401 Unauthorized` with `WWW-Authenticate` header containing information to successfully authenticate subsequent requests.\nThe `WWW-Authenticate` header must be processed to extract `realm` and `nonce` values to hash subsequent requests.\n\nWhen this request is executed within Postman, the script attached with this request does the hard work of extracting realm and nonce from the header and set it as [global variables](https://www.getpostman.com/docs/environments#global-variables?source=echo-collection-app-onboarding) named `echo_digest_nonce` and `echo_digest_realm`.\nThese variables are re-used in subsequent request for seamless integration of the two requests."
           },
           "response": []
@@ -106,16 +106,15 @@
                 "qop": ""
               }
             },
-            "url": "https://postman-echo.com/digest-auth",
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "Digest username=\"postman\", realm=\"Users\", nonce=\"ni1LiL0O37PRRhofWdCLmwFsnEtH1lew\", uri=\"/digest-auth\", response=\"254679099562cf07df9b6f5d8d15db44\", opaque=\"\"",
-                "description": ""
+                "value": "Digest username=\"postman\", realm=\"Users\", nonce=\"ni1LiL0O37PRRhofWdCLmwFsnEtH1lew\", uri=\"/digest-auth\", response=\"254679099562cf07df9b6f5d8d15db44\", opaque=\"\""
               }
             ],
             "body": {},
+            "url": "https://postman-echo.com/digest-auth",
             "description": "This endpoint sends a hashed Digest Authorization header to gain access to a valid `200 Ok` response code. In Postman, it uses the stored [global variables](https://www.getpostman.com/docs/environments#gloval-variables?source=echo-collection-app-onboarding), `echo_digest_realm` and `echo_digest_nonce`, to generate the hashed authorisation header.\n\nWithin Postman, for this request to successfully authenticate, running the previous request \"DigestAuth Request\" stores the relevant information within the global variables."
           },
           "response": [
@@ -132,7 +131,6 @@
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -226,10 +224,72 @@
                 "showPassword": false
               }
             },
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Asana-Release-Revision",
+                "value": "20171016_233236_f3d68c3e722c6e2cf6fd0d44a1b14e3208f3c5ca"
+              },
+              {
+                "key": "Origin",
+                "value": "https://app.asana.com"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+              },
+              {
+                "key": "Content-Type",
+                "value": "text/plain"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest"
+              },
+              {
+                "key": "X-Asana-Ticket",
+                "value": "d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26"
+              },
+              {
+                "key": "X-Asana-Session-Ticket",
+                "value": "3a302261f5416e05c4c0828b4ec7a221"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              },
+              {
+                "key": "DNT",
+                "value": "1"
+              },
+              {
+                "key": "Referer",
+                "value": "https://app.asana.com/0/dashboard/324467577239467"
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br"
+              },
+              {
+                "key": "Accept-Language",
+                "value": "zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4"
+              },
+              {
+                "key": "Cookie",
+                "value": "TooBusyRedirectCount=0; xsrf_token=9d3a7ba3b89d97b82c3545487ec9b981%3A1508216838075; google_auth=1508216854307; google_email=twcctz500%40haonature.com; user=324467577239455; auth_token=ba10c31fbf464debc30972b95b5b8e23; ticket=d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26; is_logged_in=true; xsrf_string_263415073d13b1d326c8b4e1b39cf03d=1508216855587; TooBusyRedirectCount=0; p=0; _ga=GA1.2.1011229085.1508216860; xsrf_string_43e3ef5532a4ff6bd75f8d9785e16f30=1508217073923; xsrf_string_e4ce4a7340c5468fa60eeb1bbffa6e68=1508217074425; xsrf_string_4962fec5d6ce57706661a72357e648c0=1508217074471; after_verification_dialog=EMAIL_DROPBOX; asana_orig_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; asana_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; luna_db_server_query_string=userId=324467577239455&shardId=324467577239463; server=prod-ws034.ec2|WeWVo"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic aGFvbmF0dTE6bmVjdHc3MjEq"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"S\":\"C\",\"C\":\"SyncRequestMessage\",\"D\":{\"actions\":{\"S\":\"C\",\"C\":\"Array\",\"D\":[]},\"sync_count\":327,\"is_overlapping\":false,\"session_sync_info\":null}}"
+            },
             "url": {
               "raw": "https://app.asana.com/app/asana/-/socket?session_id=454916017943985&user_id=324467577239455&count=335&idle=1&https://haonature.com",
               "protocol": "https",
-              "auth": {},
               "host": [
                 "app",
                 "asana",
@@ -245,112 +305,29 @@
                 {
                   "key": "session_id",
                   "value": "454916017943985",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "user_id",
                   "value": "324467577239455",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "count",
                   "value": "335",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "idle",
                   "value": "1",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "https://haonature.com",
                   "value": "",
-                  "equals": false,
-                  "description": ""
+                  "equals": false
                 }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "X-Asana-Release-Revision",
-                "value": "20171016_233236_f3d68c3e722c6e2cf6fd0d44a1b14e3208f3c5ca",
-                "description": ""
-              },
-              {
-                "key": "Origin",
-                "value": "https://app.asana.com",
-                "description": ""
-              },
-              {
-                "key": "User-Agent",
-                "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "text/plain",
-                "description": ""
-              },
-              {
-                "key": "X-Requested-With",
-                "value": "XMLHttpRequest",
-                "description": ""
-              },
-              {
-                "key": "X-Asana-Ticket",
-                "value": "d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26",
-                "description": ""
-              },
-              {
-                "key": "X-Asana-Session-Ticket",
-                "value": "3a302261f5416e05c4c0828b4ec7a221",
-                "description": ""
-              },
-              {
-                "key": "Accept",
-                "value": "*/*",
-                "description": ""
-              },
-              {
-                "key": "DNT",
-                "value": "1",
-                "description": ""
-              },
-              {
-                "key": "Referer",
-                "value": "https://app.asana.com/0/dashboard/324467577239467",
-                "description": ""
-              },
-              {
-                "key": "Accept-Encoding",
-                "value": "gzip, deflate, br",
-                "description": ""
-              },
-              {
-                "key": "Accept-Language",
-                "value": "zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4",
-                "description": ""
-              },
-              {
-                "key": "Cookie",
-                "value": "TooBusyRedirectCount=0; xsrf_token=9d3a7ba3b89d97b82c3545487ec9b981%3A1508216838075; google_auth=1508216854307; google_email=twcctz500%40haonature.com; user=324467577239455; auth_token=ba10c31fbf464debc30972b95b5b8e23; ticket=d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26; is_logged_in=true; xsrf_string_263415073d13b1d326c8b4e1b39cf03d=1508216855587; TooBusyRedirectCount=0; p=0; _ga=GA1.2.1011229085.1508216860; xsrf_string_43e3ef5532a4ff6bd75f8d9785e16f30=1508217073923; xsrf_string_e4ce4a7340c5468fa60eeb1bbffa6e68=1508217074425; xsrf_string_4962fec5d6ce57706661a72357e648c0=1508217074471; after_verification_dialog=EMAIL_DROPBOX; asana_orig_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; asana_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; luna_db_server_query_string=userId=324467577239455&shardId=324467577239463; server=prod-ws034.ec2|WeWVo",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "Basic aGFvbmF0dTE6bmVjdHc3MjEq",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"S\":\"C\",\"C\":\"SyncRequestMessage\",\"D\":{\"actions\":{\"S\":\"C\",\"C\":\"Array\",\"D\":[]},\"sync_count\":327,\"is_overlapping\":false,\"session_sync_info\":null}}"
+              ]
             },
             "description": "https://haonature.com"
           },
@@ -369,10 +346,72 @@
                 "showPassword": false
               }
             },
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Asana-Release-Revision",
+                "value": "20171016_233236_f3d68c3e722c6e2cf6fd0d44a1b14e3208f3c5ca"
+              },
+              {
+                "key": "Origin",
+                "value": "https://app.asana.com"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+              },
+              {
+                "key": "Content-Type",
+                "value": "text/plain"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest"
+              },
+              {
+                "key": "X-Asana-Ticket",
+                "value": "d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26"
+              },
+              {
+                "key": "X-Asana-Session-Ticket",
+                "value": "3a302261f5416e05c4c0828b4ec7a221"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              },
+              {
+                "key": "DNT",
+                "value": "1"
+              },
+              {
+                "key": "Referer",
+                "value": "https://app.asana.com/0/dashboard/324467577239467"
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br"
+              },
+              {
+                "key": "Accept-Language",
+                "value": "zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4"
+              },
+              {
+                "key": "Cookie",
+                "value": "TooBusyRedirectCount=0; xsrf_token=9d3a7ba3b89d97b82c3545487ec9b981%3A1508216838075; google_auth=1508216854307; google_email=twcctz500%40haonature.com; user=324467577239455; auth_token=ba10c31fbf464debc30972b95b5b8e23; ticket=d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26; is_logged_in=true; xsrf_string_263415073d13b1d326c8b4e1b39cf03d=1508216855587; TooBusyRedirectCount=0; p=0; _ga=GA1.2.1011229085.1508216860; xsrf_string_43e3ef5532a4ff6bd75f8d9785e16f30=1508217073923; xsrf_string_e4ce4a7340c5468fa60eeb1bbffa6e68=1508217074425; xsrf_string_4962fec5d6ce57706661a72357e648c0=1508217074471; after_verification_dialog=EMAIL_DROPBOX; asana_orig_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; asana_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; luna_db_server_query_string=userId=324467577239455&shardId=324467577239463; server=prod-ws034.ec2|WeWVo"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic aGFvbmF0dTE6bmVjdHc3MjEq"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"S\":\"C\",\"C\":\"SyncRequestMessage\",\"D\":{\"actions\":{\"S\":\"C\",\"C\":\"Array\",\"D\":[]},\"sync_count\":327,\"is_overlapping\":false,\"session_sync_info\":null}}"
+            },
             "url": {
               "raw": "https://app.asana.com/app/asana/-/socket?session_id=454916017943985&user_id=324467577239455&count=335&idle=1&https://haonature.com",
               "protocol": "https",
-              "auth": {},
               "host": [
                 "app",
                 "asana",
@@ -388,112 +427,29 @@
                 {
                   "key": "session_id",
                   "value": "454916017943985",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "user_id",
                   "value": "324467577239455",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "count",
                   "value": "335",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "idle",
                   "value": "1",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "https://haonature.com",
                   "value": "",
-                  "equals": false,
-                  "description": ""
+                  "equals": false
                 }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "X-Asana-Release-Revision",
-                "value": "20171016_233236_f3d68c3e722c6e2cf6fd0d44a1b14e3208f3c5ca",
-                "description": ""
-              },
-              {
-                "key": "Origin",
-                "value": "https://app.asana.com",
-                "description": ""
-              },
-              {
-                "key": "User-Agent",
-                "value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "text/plain",
-                "description": ""
-              },
-              {
-                "key": "X-Requested-With",
-                "value": "XMLHttpRequest",
-                "description": ""
-              },
-              {
-                "key": "X-Asana-Ticket",
-                "value": "d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26",
-                "description": ""
-              },
-              {
-                "key": "X-Asana-Session-Ticket",
-                "value": "3a302261f5416e05c4c0828b4ec7a221",
-                "description": ""
-              },
-              {
-                "key": "Accept",
-                "value": "*/*",
-                "description": ""
-              },
-              {
-                "key": "DNT",
-                "value": "1",
-                "description": ""
-              },
-              {
-                "key": "Referer",
-                "value": "https://app.asana.com/0/dashboard/324467577239467",
-                "description": ""
-              },
-              {
-                "key": "Accept-Encoding",
-                "value": "gzip, deflate, br",
-                "description": ""
-              },
-              {
-                "key": "Accept-Language",
-                "value": "zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4",
-                "description": ""
-              },
-              {
-                "key": "Cookie",
-                "value": "TooBusyRedirectCount=0; xsrf_token=9d3a7ba3b89d97b82c3545487ec9b981%3A1508216838075; google_auth=1508216854307; google_email=twcctz500%40haonature.com; user=324467577239455; auth_token=ba10c31fbf464debc30972b95b5b8e23; ticket=d2b59a77a15f0c1d5b89af27c01c20bd0543f3da6aea66d9abf36bd1cd3a4a26; is_logged_in=true; xsrf_string_263415073d13b1d326c8b4e1b39cf03d=1508216855587; TooBusyRedirectCount=0; p=0; _ga=GA1.2.1011229085.1508216860; xsrf_string_43e3ef5532a4ff6bd75f8d9785e16f30=1508217073923; xsrf_string_e4ce4a7340c5468fa60eeb1bbffa6e68=1508217074425; xsrf_string_4962fec5d6ce57706661a72357e648c0=1508217074471; after_verification_dialog=EMAIL_DROPBOX; asana_orig_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; asana_attr=%7B%22source%22%3A%22%22%2C%22query_string%22%3A%22%22%2C%22exit_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22landing_page%22%3A%22%2Fguide%2Fhelp%2Fapi%2Fapi%22%2C%22useragent%22%3A%22Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F61.0.3163.100%20Safari%2F537.36%22%2C%22timestamp%22%3A1508218112%2C%22convNum%22%3A816765859%7D; luna_db_server_query_string=userId=324467577239455&shardId=324467577239463; server=prod-ws034.ec2|WeWVo",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "Basic aGFvbmF0dTE6bmVjdHc3MjEq",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"S\":\"C\",\"C\":\"SyncRequestMessage\",\"D\":{\"actions\":{\"S\":\"C\",\"C\":\"Array\",\"D\":[]},\"sync_count\":327,\"is_overlapping\":false,\"session_sync_info\":null}}"
+              ]
             },
             "description": "https://haonature.com"
           },
@@ -503,10 +459,10 @@
           "_postman_id": "2483749-4e9ee2e4-e09c-57e0-5a1b-0ff26c21b60e",
           "name": "https://haonature.com",
           "request": {
-            "url": "",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "",
             "description": "https://haonature.com"
           },
           "response": []
@@ -543,16 +499,15 @@
                 "showPassword": false
               }
             },
-            "url": "https://postman-echo.com/basic-auth",
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "Basic cG9zdG1hbjpwYXNzd29yZA==",
-                "description": ""
+                "value": "Basic cG9zdG1hbjpwYXNzd29yZA=="
               }
             ],
             "body": {},
+            "url": "https://postman-echo.com/basic-auth",
             "description": "This endpoint simulates a **basic-auth** protected endpoint. \nThe endpoint accepts a default username and password and returns a status code of `200 ok` only if the same is provided. \nOtherwise it will return a status code `401 unauthorized`.\n\n> Username: `postman`\n> \n> Password: `password`\n\nTo use this endpoint, send a request with the header `Authorization: Basic cG9zdG1hbjpwYXNzd29yZA==`. \nThe cryptic latter half of the header value is a base64 encoded concatenation of the default username and password. \nUsing Postman, to send this request, you can simply fill in the username and password in the \"Authorization\" tab and Postman will do the rest for you.\n\nTo know more about basic authentication, refer to the [Basic Access Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) wikipedia article.\nThe article on [authentication helpers](https://www.getpostman.com/docs/helpers#basic-auth?source=echo-collection-app-onboarding) elaborates how to use the same within the Postman app."
           },
           "response": [
@@ -569,7 +524,6 @@
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -683,7 +637,6 @@
                 "addEmptyParamsToSign": false
               }
             },
-            "url": "https://postman-echo.com/oauth1",
             "method": "GET",
             "header": [],
             "body": {
@@ -716,6 +669,7 @@
                 }
               ]
             },
+            "url": "https://postman-echo.com/oauth1",
             "description": "OAuth1.0a is a specification that defines a protocol that can be used by one\nservice to access \"protected\" resources (endpoints) on another service. A\nmajor part of OAuth1.0 is HTTP Request Signing. This endpoint allows you to \ncheck whether the request calculation works properly in the client. \n\nThe endpoint supports the HTTP ``Authorization`` header. In case the signature\nverification fails, the endpoint provides the four debug values,\n\n* ``base_uri``\n* ``normalized_param_string``\n* ``base_string``\n* ``signing_key``\n\nFor more details about these parameters, check the [OAuth1.0a Specification](http://oauth.net/core/1.0a/)\n\nIn order to use this endpoint, you can set the following values:\n\n> Consumer Key: ``RKCGzna7bv9YD57c``\n>\n> Consumer Secret: ``D+EdQ-gs$-%@2Nu7``\n\nIf you are using Postman, also check the \"Add params to header\" and \n\"Auto add parameters\" boxes."
           },
           "response": [
@@ -723,7 +677,6 @@
               "id": "2483749-d234f0e3-683c-1705-d4b1-c94f6c27fa52",
               "name": "200",
               "originalRequest": {
-                "url": "https://echo.getpostman.com/oauth1",
                 "method": "GET",
                 "header": [
                   {
@@ -761,12 +714,12 @@
                       "type": "text"
                     }
                   ]
-                }
+                },
+                "url": "https://echo.getpostman.com/oauth1"
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -855,7 +808,6 @@
               "id": "2483749-d536f1d6-ad89-2a2d-94b3-8aa11f28f197",
               "name": "401",
               "originalRequest": {
-                "url": "https://echo.getpostman.com/oauth1",
                 "method": "GET",
                 "header": [
                   {
@@ -894,12 +846,12 @@
                       "type": "text"
                     }
                   ]
-                }
+                },
+                "url": "https://echo.getpostman.com/oauth1"
               },
               "status": "Unauthorized",
               "code": 401,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -1007,7 +959,6 @@
                 "timestamp": ""
               }
             },
-            "url": "https://postman-echo.com/auth/hawk",
             "method": "GET",
             "header": [],
             "body": {
@@ -1035,6 +986,7 @@
                 }
               ]
             },
+            "url": "https://postman-echo.com/auth/hawk",
             "description": "This endpoint is a Hawk Authentication protected endpoint. [Hawk authentication](https://github.com/hueniverse/hawk) is a widely used protocol for protecting API endpoints. One of Hawk's main goals is to enable HTTP authentication for services that do not use TLS (although it can be used in conjunction with TLS as well).\n\nIn order to use this endpoint, select the \"Hawk Auth\" helper inside Postman, and set the following values:\n\nHawk Auth ID: `dh37fgj492je`\n\nHawk Auth Key: `werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn`\n\nAlgorithm: `sha256`\n\nThe rest of the values are optional, and can be left blank. Hitting send should give you a response with a status code of 200 OK."
           },
           "response": [
@@ -1042,7 +994,6 @@
               "id": "2483749-8bcfebdc-a6fe-7607-cef3-7ee28a0b75a2",
               "name": "Success",
               "originalRequest": {
-                "url": "https://echo.getpostman.com/auth/hawk",
                 "method": "GET",
                 "header": [
                   {
@@ -1076,12 +1027,12 @@
                       "type": "text"
                     }
                   ]
-                }
+                },
+                "url": "https://echo.getpostman.com/auth/hawk"
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -1206,10 +1157,10 @@
           "_postman_id": "2483749-86f55f44-8f12-6d46-e6c8-fb453d7fffba",
           "name": "haonature.com",
           "request": {
-            "url": "haonature.com",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "haonature.com",
             "description": "2e81d2cf03a248ad85812f62eb2a14f8\nhaonature.com"
           },
           "response": []
@@ -1218,10 +1169,10 @@
           "_postman_id": "2483749-9b3f37d2-66ab-c117-a3c1-a34927400aaa",
           "name": "https://haonature.com",
           "request": {
-            "url": "https://haonature.com",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://haonature.com",
             "description": "haonature.com"
           },
           "response": []
@@ -1269,10 +1220,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/cookies/set?foo1=bar1&foo2=bar2",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/cookies/set?foo1=bar1&foo2=bar2",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "cookies",
+                "set"
+              ],
+              "query": [
+                {
+                  "key": "foo1",
+                  "value": "bar1"
+                },
+                {
+                  "key": "foo2",
+                  "value": "bar2"
+                }
+              ]
+            },
             "description": "The cookie setter endpoint accepts a list of cookies and their values as part of URL parameters of a `GET` request. These cookies are saved and can be subsequently retrieved or deleted. The response of this request returns a JSON with all cookies listed.\n\nTo set your own set of cookies, simply replace the URL parameters \"foo1=bar1&foo2=bar2\" with your own set of key-value pairs."
           },
           "response": [
@@ -1289,7 +1261,6 @@
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -1394,10 +1365,10 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/cookies",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://postman-echo.com/cookies",
             "description": "Use this endpoint to get a list of all cookies that are stored with respect to this domain. Whatever key-value pairs that has been previously set by calling the \"Set Cookies\" endpoint, will be returned as response JSON."
           },
           "response": [
@@ -1414,7 +1385,6 @@
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -1531,10 +1501,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/cookies/delete?foo1&foo2",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/cookies/delete?foo1&foo2",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "cookies",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "foo1",
+                  "value": ""
+                },
+                {
+                  "key": "foo2",
+                  "value": ""
+                }
+              ]
+            },
             "description": "One or more cookies that has been set for this domain can be deleted by providing the cookie names as part of the URL parameter. The response of this request is a JSON containing the list of currently set cookies."
           },
           "response": [
@@ -1551,7 +1542,6 @@
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -1665,16 +1655,15 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/headers",
             "method": "GET",
             "header": [
               {
                 "key": "my-sample-header",
-                "value": "Lorem ipsum dolor sit amet",
-                "description": ""
+                "value": "Lorem ipsum dolor sit amet"
               }
             ],
             "body": {},
+            "url": "https://postman-echo.com/headers",
             "description": "A `GET` request to this endpoint returns the list of all request headers as part of the response JSON.\nIn Postman, sending your own set of headers through the [Headers tab](https://www.getpostman.com/docs/requests#headers?source=echo-collection-app-onboarding) will reveal the headers as part of the response."
           },
           "response": [
@@ -1682,7 +1671,6 @@
               "id": "2483749-881f141f-44c5-702f-211d-475360c6ccb3",
               "name": "my-sample-header",
               "originalRequest": {
-                "url": "https://echo.getpostman.com/headers",
                 "method": "GET",
                 "header": [
                   {
@@ -1691,12 +1679,12 @@
                     "enabled": true
                   }
                 ],
-                "body": {}
+                "body": {},
+                "url": "https://echo.getpostman.com/headers"
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -1805,10 +1793,30 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/response-headers?Content-Type=text/html&test=response_headers",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/response-headers?Content-Type=text/html&test=response_headers",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "response-headers"
+              ],
+              "query": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                },
+                {
+                  "key": "test",
+                  "value": "response_headers"
+                }
+              ]
+            },
             "description": "This endpoint causes the server to send custom set of response headers. Providing header values as part of the URL parameters of a `GET` request to this endpoint returns the same as part of response header.\n\nTo send your own set of headers, simply add or replace the the URL parameters with your own set."
           },
           "response": [
@@ -1816,15 +1824,35 @@
               "id": "2483749-85a7208f-3c37-f297-9772-81b97d28dae0",
               "name": "Response headers",
               "originalRequest": {
-                "url": "https://echo.getpostman.com/response-headers?Content-Type=text/html&test=response_headers",
                 "method": "GET",
                 "header": [],
-                "body": {}
+                "body": {},
+                "url": {
+                  "raw": "https://echo.getpostman.com/response-headers?Content-Type=text/html&test=response_headers",
+                  "protocol": "https",
+                  "host": [
+                    "echo",
+                    "getpostman",
+                    "com"
+                  ],
+                  "path": [
+                    "response-headers"
+                  ],
+                  "query": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/html"
+                    },
+                    {
+                      "key": "test",
+                      "value": "response_headers"
+                    }
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "html",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -1961,10 +1989,26 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/get?test=123",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/get?test=123",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "get"
+              ],
+              "query": [
+                {
+                  "key": "test",
+                  "value": "123"
+                }
+              ]
+            },
             "description": "The HTTP `GET` request method is meant to retrieve data from a server. The data\nis identified by a unique URI (Uniform Resource Identifier). \n\nA `GET` request can pass parameters to the server using \"Query String \nParameters\". For example, in the following request,\n\n> http://example.com/hi/there?hand=wave\n\nThe parameter \"hand\" has the value \"wave\".\n\nThis endpoint echoes the HTTP headers, request parameters and the complete\nURI requested."
           },
           "response": []
@@ -1999,19 +2043,18 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/post",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "text/plain",
-                "description": ""
+                "value": "text/plain"
               }
             ],
             "body": {
               "mode": "raw",
               "raw": "Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium. Praesent neque quam, tincidunt nec leo eget, rutrum vehicula magna.\nMaecenas consequat elementum elit, id semper sem tristique et. Integer pulvinar enim quis consectetur interdum volutpat."
             },
+            "url": "https://postman-echo.com/post",
             "description": "The HTTP `POST` request method is meant to transfer data to a server \n(and elicit a response). What data is returned depends on the implementation\nof the server.\n\nA `POST` request can pass parameters to the server using \"Query String \nParameters\", as well as the Request Body. For example, in the following request,\n\n> POST /hi/there?hand=wave\n>\n> <request-body>\n\nThe parameter \"hand\" has the value \"wave\". The request body can be in multiple\nformats. These formats are defined by the MIME type of the request. The MIME \nType can be set using the ``Content-Type`` HTTP header. The most commonly used \nMIME types are:\n\n* `multipart/form-data`\n* `application/x-www-form-urlencoded`\n* `application/json`\n\nThis endpoint echoes the HTTP headers, request parameters, the contents of\nthe request body and the complete URI requested."
           },
           "response": []
@@ -2044,13 +2087,11 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/post",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded",
-                "description": ""
+                "value": "application/x-www-form-urlencoded"
               }
             ],
             "body": {
@@ -2063,6 +2104,7 @@
                 }
               ]
             },
+            "url": "https://postman-echo.com/post",
             "description": "The HTTP `POST` request method is meant to transfer data to a server \n(and elicit a response). What data is returned depends on the implementation\nof the server.\n\nA `POST` request can pass parameters to the server using \"Query String \nParameters\", as well as the Request Body. For example, in the following request,\n\n> POST /hi/there?hand=wave\n>\n> <request-body>\n\nThe parameter \"hand\" has the value \"wave\". The request body can be in multiple\nformats. These formats are defined by the MIME type of the request. The MIME \nType can be set using the ``Content-Type`` HTTP header. The most commonly used \nMIME types are:\n\n* `multipart/form-data`\n* `application/x-www-form-urlencoded`\n* `application/json`\n\nThis endpoint echoes the HTTP headers, request parameters, the contents of\nthe request body and the complete URI requested when data is sent as a form parameter."
           },
           "response": []
@@ -2095,13 +2137,13 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/put",
             "method": "PUT",
             "header": [],
             "body": {
               "mode": "raw",
               "raw": "Etiam mi lacus, cursus vitae felis et, blandit pellentesque neque. Vestibulum eget nisi a tortor commodo dignissim.\nQuisque ipsum ligula, faucibus a felis a, commodo elementum nisl. Mauris vulputate sapien et tincidunt viverra. Donec vitae velit nec metus."
             },
+            "url": "https://postman-echo.com/put",
             "description": "The HTTP `PUT` request method is similar to HTTP `POST`. It too is meant to \ntransfer data to a server (and elicit a response). What data is returned depends on the implementation\nof the server.\n\nA `PUT` request can pass parameters to the server using \"Query String \nParameters\", as well as the Request Body. For example, in the following \nraw HTTP request,\n\n> PUT /hi/there?hand=wave\n>\n> <request-body>\n\n\n"
           },
           "response": []
@@ -2134,13 +2176,13 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/patch",
             "method": "PATCH",
             "header": [],
             "body": {
               "mode": "raw",
               "raw": "Curabitur auctor, elit nec pulvinar porttitor, ex augue condimentum enim, eget suscipit urna felis quis neque.\nSuspendisse sit amet luctus massa, nec venenatis mi. Suspendisse tincidunt massa at nibh efficitur fringilla. Nam quis congue mi. Etiam volutpat."
             },
+            "url": "https://postman-echo.com/patch",
             "description": "The HTTP `PATCH` method is used to update resources on a server. The exact\nuse of `PATCH` requests depends on the server in question. There are a number\nof server implementations which handle `PATCH` differently. Technically, \n`PATCH` supports both Query String parameters and a Request Body.\n\nThis endpoint accepts an HTTP `PATCH` request and provides debug information\nsuch as the HTTP headers, Query String arguments, and the Request Body."
           },
           "response": []
@@ -2173,13 +2215,13 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/delete",
             "method": "DELETE",
             "header": [],
             "body": {
               "mode": "raw",
               "raw": "Donec fermentum, nisi sed cursus eleifend, nulla tortor ultricies tellus, ut vehicula orci arcu ut velit. In volutpat egestas dapibus.\nMorbi condimentum vestibulum sapien. Etiam dignissim diam quis eros lobortis gravida vel lobortis est. Etiam gravida sed."
             },
+            "url": "https://postman-echo.com/delete",
             "description": "The HTTP `DELETE` method is used to delete resources on a server. The exact\nuse of `DELETE` requests depends on the server implementation. In general, \n`DELETE` requests support both, Query String parameters as well as a Request \nBody.\n\nThis endpoint accepts an HTTP `DELETE` request and provides debug information\nsuch as the HTTP headers, Query String arguments, and the Request Body."
           },
           "response": []
@@ -2214,10 +2256,10 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/status/200",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://postman-echo.com/status/200",
             "description": "This endpoint allows one to instruct the server which status code to respond with.\n\nEvery response is accompanied by a status code. The status code provides a summary of the nature of response sent by the server. For example, a status code of `200` means everything is okay with the response and a code of `404` implies that the requested URL does not exist on server. \nA list of all valid HTTP status code can be found at the [List of Status Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) wikipedia article. When using Postman, the response status code is described for easy reference.\n\nNote that if an invalid status code is requested to be sent, the server returns a status code of `400 Bad Request`."
           },
           "response": [
@@ -2225,15 +2267,14 @@
               "id": "2483749-a2bda27d-2c7b-eb8e-1740-be4e1fe9a079",
               "name": "200",
               "originalRequest": {
-                "url": "https://echo.getpostman.com/status/200",
                 "method": "GET",
                 "header": [],
-                "body": {}
+                "body": {},
+                "url": "https://echo.getpostman.com/status/200"
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "javascript",
-              "_postman_previewtype": "html",
               "header": [
                 {
                   "name": "Access-Control-Allow-Credentials",
@@ -2376,10 +2417,10 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/stream/10",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://postman-echo.com/stream/10",
             "description": "This endpoint allows one to recieve streaming http response using [chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding) of a configurable length.\n\nA streaming response does not wait for the entire response to be generated on server before flushing it out. This implies that for a fairly large response, parts of it can be streamed to the requestee as and when it is generated on server. The client can then take actions of processing this partially received data."
           },
           "response": []
@@ -2406,10 +2447,10 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/delay/3",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://postman-echo.com/delay/3",
             "description": "Using this endpoint one can configure how long it takes for the server to come back with a response. Appending a number to the URL defines the time (in seconds) the server will wait before responding.\n\nNote that a maximum delay of 10 seconds is accepted by the server."
           },
           "response": [
@@ -2417,15 +2458,14 @@
               "id": "2483749-64f3f9f5-e3ca-9cdd-590c-88820be2f442",
               "name": "success-response",
               "originalRequest": {
-                "url": "https://echo.getpostman.com/delay/3",
                 "method": "GET",
                 "header": [],
-                "body": {}
+                "body": {},
+                "url": "https://echo.getpostman.com/delay/3"
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
               "header": [
                 {
                   "key": "Access-Control-Allow-Credentials",
@@ -2531,10 +2571,10 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/encoding/utf8",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://postman-echo.com/encoding/utf8",
             "description": "If a response of an endpoint requires to send data beyond the basic English / ASCII character set, the `charset` parameter in the `Content-Type` response header defines the character encoding policy.\n\nThis endpoint returns an `UTF8` character encoded response body with text in various languages such as Greek, Latin, East Asian, etc. Postman can interpret the character encoding and use appropriate methods to display the character set in responses."
           },
           "response": []
@@ -2563,10 +2603,10 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/gzip",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://postman-echo.com/gzip",
             "description": "This endpoint returns the response using [gzip compression algoritm](https://en.wikipedia.org/wiki/Gzip).\nThe uncompressed response is a JSON string containing the details of the request sent by the client. For this endpoint to work, one should request with `Accept-encoding` header containing `gzip` as part of its value. Postman supports gzip, deflate and SDCH decoding and automatically sends them as part of the request.\n\nHTTP Compression allows the server to send responses in a compressed format, which is uncompressed by the client before processing. This reduces network bandwidth consumption at the cost of increase in CPU usage.\nTo know more about this, refer the [HTTP Compression](https://en.wikipedia.org/wiki/HTTP_compression) wikipedia article."
           },
           "response": []
@@ -2597,10 +2637,10 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/deflate",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://postman-echo.com/deflate",
             "description": "This endpoint returns the response using [deflate compression algoritm](https://en.wikipedia.org/wiki/DEFLATE). \nThe uncompressed response is a JSON string containing the details of the request sent by the client. For this endpoint to work, one should request with `Accept-encoding` header containing `deflate` as part of its value. Postman supports gzip, deflate and SDCH decoding and automatically sends them as part of the request.\n\nHTTP Compression allows the server to send responses in a compressed format, which is uncompressed by the client before processing. This reduces network bandwidth consumption at the cost of increase in CPU usage.\nTo know more about this, refer the [HTTP Compression](https://en.wikipedia.org/wiki/HTTP_compression) wikipedia article."
           },
           "response": []
@@ -2623,10 +2663,10 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/ip",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://postman-echo.com/ip",
             "description": "A simple `GET` request to return the IP address of the source request in the following `JSON` format:\n\n```json\n{\n  ip: \"request-ip-address\"\n}\n```"
           },
           "response": []
@@ -2655,10 +2695,10 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/now",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": "https://postman-echo.com/time/now",
             "description": "A simple `GET` request to `/time/now` to return the current timestamp as a UTC string.\n\n```\nFri, 04 Nov 2016 09:00:46 GMT\n```"
           },
           "response": [
@@ -2666,15 +2706,14 @@
               "id": "2483749-f3f2053b-e446-a8b1-aee2-124618275f94",
               "name": "time as text",
               "originalRequest": {
-                "url": "https://postman-echo.com/time/now",
                 "method": "GET",
                 "header": [],
-                "body": {}
+                "body": {},
+                "url": "https://postman-echo.com/time/now"
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "html",
-              "_postman_previewtype": "text",
               "header": [
                 {
                   "key": "Access-Control-Allow-Credentials",
@@ -2796,10 +2835,27 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/valid?timestamp=2016-10-10",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/valid?timestamp=2016-10-10",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "valid"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/valid` to determine the validity of the timestamp, (current by default).\nThis endpoint accepts `timestamp`, `locale`, `format`, and `strict` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a valid key to indicate the result. The response code is `200`.\n\n```\n{\n  valid: true/false\n}\n```"
           },
           "response": [
@@ -2807,15 +2863,31 @@
               "id": "2483749-7aa5b2c4-70b5-d5f1-843b-ab90365ee59e",
               "name": "Invalid Timestamp",
               "originalRequest": {
-                "url": "https://postman-echo.com/time/valid?timestamp=2016-10-10",
                 "method": "GET",
                 "header": [],
-                "body": {}
+                "body": {},
+                "url": {
+                  "raw": "https://postman-echo.com/time/valid?timestamp=2016-10-10",
+                  "protocol": "https",
+                  "host": [
+                    "postman-echo",
+                    "com"
+                  ],
+                  "path": [
+                    "time",
+                    "valid"
+                  ],
+                  "query": [
+                    {
+                      "key": "timestamp",
+                      "value": "2016-10-10"
+                    }
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
               "header": [
                 {
                   "key": "Access-Control-Allow-Credentials",
@@ -2914,15 +2986,31 @@
               "id": "2483749-9fb04532-776f-0d8b-529a-9e3887fdebe4",
               "name": "Valid Timestamp",
               "originalRequest": {
-                "url": "https://postman-echo.com/time/valid?timestamp=2016-10-10",
                 "method": "GET",
                 "header": [],
-                "body": {}
+                "body": {},
+                "url": {
+                  "raw": "https://postman-echo.com/time/valid?timestamp=2016-10-10",
+                  "protocol": "https",
+                  "host": [
+                    "postman-echo",
+                    "com"
+                  ],
+                  "path": [
+                    "time",
+                    "valid"
+                  ],
+                  "query": [
+                    {
+                      "key": "timestamp",
+                      "value": "2016-10-10"
+                    }
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
               "header": [
                 {
                   "key": "Access-Control-Allow-Credentials",
@@ -3038,10 +3126,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/format?timestamp=2016-10-10&format=mm",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/format?timestamp=2016-10-10&format=mm",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "format"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                },
+                {
+                  "key": "format",
+                  "value": "mm"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/format` to convert the timestamp to any desired valid format.\n\nThis endpoint accepts `timestamp`, `locale`, `format`, and `strict` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a `format` key to indicate the result. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  format: \"formatted-timestamp\"\n}\n```"
           },
           "response": []
@@ -3065,10 +3174,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/unit?timestamp=2016-10-10&unit=day",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/unit?timestamp=2016-10-10&unit=day",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "unit"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                },
+                {
+                  "key": "unit",
+                  "value": "day"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/unit` to extract the specified timestamp unit (as provided in the `unit` query parameter). The default unit returned is the `year`.\n\nThis endpoint accepts `timestamp`, `locale`, `format`, and `strict` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a `unit` key to indicate the result. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  unit: \"extracted-timestamp-unit\"\n}\n```"
           },
           "response": []
@@ -3090,10 +3220,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/add?timestamp=2016-10-10&years=100",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/add?timestamp=2016-10-10&years=100",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "add"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                },
+                {
+                  "key": "years",
+                  "value": "100"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/add` to add units of time to the specified / current timestamp (as provided in the `years`, `months`, `days`, `hours`, `minutes`, `seconds`, and `milliseconds` query parameters).\n\nThis endpoint accepts `timestamp`, `locale`, `format`, and `strict` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a `sum` key to indicate the result. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  sum: \"sum of (provided / current) and provided timestamps\"\n}\n```"
           },
           "response": []
@@ -3115,10 +3266,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/subtract?timestamp=2016-10-10&years=100",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/subtract?timestamp=2016-10-10&years=100",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "subtract"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                },
+                {
+                  "key": "years",
+                  "value": "100"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/subtract` to subtract units of time from the specified / current timestamp (as provided in the `years`, `months`, `days`, `hours`, `minutes`, `seconds`, and `milliseconds` query parameters).\n\nThis endpoint accepts `timestamp`, `locale`, `format`, and `strict` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a `difference` key to indicate the result. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  difference: \"difference between (provided / current) and provided timestamps\"\n}\n```"
           },
           "response": []
@@ -3140,10 +3312,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/start?timestamp=2016-10-10&unit=month",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/start?timestamp=2016-10-10&unit=month",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "start"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                },
+                {
+                  "key": "unit",
+                  "value": "month"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/start` to return a relative timstamp in the past from the specified / current timestamp (as provided in the `unit` query parameter).\n\nFor instance, if the `unit` has been specified as `month`, the returned timestamp would indicate the beginning of the current month. Similar results are returned for other units of time, like: `years`, `months`, `days`, `hours`, `minutes`, `seconds`, and `milliseconds`\n\nThis endpoint accepts `timestamp`, `locale`, `format`, and `strict` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a `start` key to indicate the result. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  start: \"A timestamp from the past, depending on the `unit` specified\"\n}\n```"
           },
           "response": []
@@ -3165,10 +3358,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/start?timestamp=2016-10-10&unit=month",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/start?timestamp=2016-10-10&unit=month",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "start"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                },
+                {
+                  "key": "unit",
+                  "value": "month"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/object` to return the current / provided timestamp as a JSON object.\n\nFor instance, if the `unit` has been specified as `month`, the returned timestamp would indicate the beginning of the current month. Similar results are returned for other units of time, like: `years`, `months`, `days`, `hours`, `minutes`, `seconds`, and `milliseconds`\n\nThis endpoint accepts `timestamp`, `locale`, `format`, and `strict` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  years: 2016,\n  months: 10,\n  days: 10,\n  hours: 23,\n  minutes: 34,\n  seconds: 20,\n  milliseconds: 980\n}\n```"
           },
           "response": []
@@ -3191,10 +3405,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/before?timestamp=2016-10-10&target=2017-10-10",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/before?timestamp=2016-10-10&target=2017-10-10",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "before"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                },
+                {
+                  "key": "target",
+                  "value": "2017-10-10"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/before` to check if the provided timestamps is before a comparison `target` (query parameter).\n\nThis endpoint accepts `timestamp`, `locale`, `format`, `strict`, and `target` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a `before` key to indicate the result. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  before: true/false\n}\n```"
           },
           "response": []
@@ -3217,10 +3452,31 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/after?timestamp=2016-10-10&target=2017-10-10",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/after?timestamp=2016-10-10&target=2017-10-10",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "after"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                },
+                {
+                  "key": "target",
+                  "value": "2017-10-10"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/after` to check if the provided timestamps is after a comparison `target` (query parameter).\n\nThis endpoint accepts `timestamp`, `locale`, `format`, `strict`, and `target` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a `after` key to indicate the result. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  after: true/false\n}\n```"
           },
           "response": []
@@ -3243,10 +3499,35 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/between?timestamp=2016-10-10&start=2017-10-10&end=2019-10-10",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/between?timestamp=2016-10-10&start=2017-10-10&end=2019-10-10",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "between"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                },
+                {
+                  "key": "start",
+                  "value": "2017-10-10"
+                },
+                {
+                  "key": "end",
+                  "value": "2019-10-10"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/between` to check if the provided timestamp is between a range specified by the `start` and `end` query parameters. A resolution limit can also be specified by the `unit` query parameter.\n\nFor instance, for a resolution `unit` of `month`,\n`2016-10-05` does lie between `2016-11-02` and `2016-09-01`.\n\nThis endpoint also accepts `timestamp`, `locale`, `format`, `strict`, and `target` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a `between` key to indicate the result. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  between: true/false\n}\n```"
           },
           "response": []
@@ -3267,10 +3548,27 @@
             }
           ],
           "request": {
-            "url": "https://postman-echo.com/time/leap?timestamp=2016-10-10",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "https://postman-echo.com/time/leap?timestamp=2016-10-10",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "time",
+                "leap"
+              ],
+              "query": [
+                {
+                  "key": "timestamp",
+                  "value": "2016-10-10"
+                }
+              ]
+            },
             "description": "A simple `GET` request to `/time/leap` to check if the provided/current timestamp belongs to a leap year.\n\nThis endpoint also accepts `timestamp`, `locale`, `format`, `strict`, and `target` query parameters to construct the date time instance to check against.\n\nResponses are provided in JSON format, with a `leap` key to indicate the result. The response code is `200` for valid query parameters, and `400` otherwise.\n\n```\n{\n  leap: true/false\n}\n```"
           },
           "response": []
@@ -3286,18 +3584,38 @@
           "_postman_id": "2483749-fffc59d5-1e2d-ccc8-2101-2f7b9216be40",
           "name": "Transform collection from format v1 to v2",
           "request": {
-            "url": "https://postman-echo.com/transform/collection?from=1&to=2",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"id\": \"7875be4b-917d-4aff-8cc4-5606c36bf418\",\n  \"name\": \"Sample Postman Collection\",\n  \"description\": \"A sample collection to demonstrate collections as a set of related requests\",\n  \"order\": [\n    \"4d9134be-e8bf-4693-9cd7-1c0fc66ae739\",\n    \"141ba274-cc50-4377-a59c-e080066f375e\",\n    \"4511ca8b-0bc7-430f-b894-a7ec1036f322\"\n  ],\n  \"folders\": [],\n  \"requests\": [\n    {\n      \"id\": \"4d9134be-e8bf-4693-9cd7-1c0fc66ae739\",\n      \"name\": \"A simple GET request\",\n      \"collectionId\": \"877b9dae-a50e-4152-9b89-870c37216f78\",\n      \"method\": \"GET\",\n      \"headers\": \"\",\n      \"data\": [],\n      \"rawModeData\": \"\",\n      \"tests\": \"tests['response code is 200'] = (responseCode.code === 200);\",\n      \"preRequestScript\": \"\",\n      \"url\": \"https://postman-echo.com/get?source=newman-sample-github-collection\"\n    },\n    {\n      \"id\": \"141ba274-cc50-4377-a59c-e080066f375e\",\n      \"name\": \"A simple POST request\",\n      \"collectionId\": \"877b9dae-a50e-4152-9b89-870c37216f78\",\n      \"method\": \"POST\",\n      \"headers\": \"Content-Type: text/plain\",\n      \"dataMode\": \"raw\",\n      \"data\": [],\n      \"rawModeData\": \"Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...\",\n      \"url\": \"https://postman-echo.com/post\"\n    },\n    {\n      \"id\": \"4511ca8b-0bc7-430f-b894-a7ec1036f322\",\n      \"name\": \"A simple POST request with JSON body\",\n      \"collectionId\": \"877b9dae-a50e-4152-9b89-870c37216f78\",\n      \"method\": \"POST\",\n      \"headers\": \"Content-Type: application/json\",\n      \"dataMode\": \"raw\",\n      \"data\": [],\n      \"rawModeData\": \"{\\\"text\\\":\\\"Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...\\\"}\",\n      \"url\": \"https://postman-echo.com/post\"\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "https://postman-echo.com/transform/collection?from=1&to=2",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "transform",
+                "collection"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "1"
+                },
+                {
+                  "key": "to",
+                  "value": "2"
+                }
+              ]
             },
             "description": ""
           },
@@ -3306,7 +3624,6 @@
               "id": "2483749-1ae2f3c1-9bde-e8f1-273c-82532812f931",
               "name": "Sample v2 Response",
               "originalRequest": {
-                "url": "https://postman-echo.com/transform/collection?from=1&to=2",
                 "method": "POST",
                 "header": [
                   {
@@ -3320,12 +3637,33 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"id\": \"7875be4b-917d-4aff-8cc4-5606c36bf418\",\n  \"name\": \"Sample Postman Collection\",\n  \"description\": \"A sample collection to demonstrate collections as a set of related requests\",\n  \"order\": [\n    \"4d9134be-e8bf-4693-9cd7-1c0fc66ae739\",\n    \"141ba274-cc50-4377-a59c-e080066f375e\",\n    \"4511ca8b-0bc7-430f-b894-a7ec1036f322\"\n  ],\n  \"folders\": [],\n  \"requests\": [\n    {\n      \"id\": \"4d9134be-e8bf-4693-9cd7-1c0fc66ae739\",\n      \"name\": \"A simple GET request\",\n      \"collectionId\": \"877b9dae-a50e-4152-9b89-870c37216f78\",\n      \"method\": \"GET\",\n      \"headers\": \"\",\n      \"data\": [],\n      \"rawModeData\": \"\",\n      \"tests\": \"tests['response code is 200'] = (responseCode.code === 200);\",\n      \"preRequestScript\": \"\",\n      \"url\": \"https://postman-echo.com/get?source=newman-sample-github-collection\"\n    },\n    {\n      \"id\": \"141ba274-cc50-4377-a59c-e080066f375e\",\n      \"name\": \"A simple POST request\",\n      \"collectionId\": \"877b9dae-a50e-4152-9b89-870c37216f78\",\n      \"method\": \"POST\",\n      \"headers\": \"Content-Type: text/plain\",\n      \"dataMode\": \"raw\",\n      \"data\": [],\n      \"rawModeData\": \"Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...\",\n      \"url\": \"https://postman-echo.com/post\"\n    },\n    {\n      \"id\": \"4511ca8b-0bc7-430f-b894-a7ec1036f322\",\n      \"name\": \"A simple POST request with JSON body\",\n      \"collectionId\": \"877b9dae-a50e-4152-9b89-870c37216f78\",\n      \"method\": \"POST\",\n      \"headers\": \"Content-Type: application/json\",\n      \"dataMode\": \"raw\",\n      \"data\": [],\n      \"rawModeData\": \"{\\\"text\\\":\\\"Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...\\\"}\",\n      \"url\": \"https://postman-echo.com/post\"\n    }\n  ]\n}"
+                },
+                "url": {
+                  "raw": "https://postman-echo.com/transform/collection?from=1&to=2",
+                  "protocol": "https",
+                  "host": [
+                    "postman-echo",
+                    "com"
+                  ],
+                  "path": [
+                    "transform",
+                    "collection"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "1"
+                    },
+                    {
+                      "key": "to",
+                      "value": "2"
+                    }
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
               "header": [
                 {
                   "key": "Access-Control-Allow-Credentials",
@@ -3432,18 +3770,38 @@
           "_postman_id": "2483749-dc8d6e30-c1cf-9d98-4b95-fc1ca6196511",
           "name": "Transform collection from format v2 to v1",
           "request": {
-            "url": "https://postman-echo.com/transform/collection?from=2&to=1",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"info\": {\n    \"name\": \"Sample Postman Collection\",\n    \"schema\": \"https://schema.getpostman.com/json/collection/v2.0.0/collection.json\",\n    \"description\": \"A sample collection to demonstrate collections as a set of related requests\"\n  },\n\n  \"item\": [{\n    \"name\": \"A simple GET request\",\n    \"event\": [{\n      \"listen\": \"test\",\n      \"script\": {\n        \"type\": \"text/javascript\",\n        \"exec\": [\"tests['response code is 200'] = (responseCode.code === 200);\"]\n      }\n    }],\n    \"request\": {\n      \"url\": \"https://postman-echo.com/get?source=newman-sample-github-collection\",\n      \"method\": \"GET\"\n    }\n  }, {\n    \"name\": \"A simple POST request\",\n    \"request\": {\n      \"url\": \"https://postman-echo.com/post\",\n      \"method\": \"POST\",\n      \"header\": [{\n        \"key\": \"Content-Type\",\n        \"value\": \"text/plain\"\n      }],\n      \"body\": {\n        \"mode\": \"raw\",\n        \"raw\": \"Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...\"\n      }\n    }\n  }, {\n    \"name\": \"A simple POST request with JSON body\",\n    \"request\": {\n      \"url\": \"https://postman-echo.com/post\",\n      \"method\": \"POST\",\n      \"header\": [{\n        \"key\": \"Content-Type\",\n        \"value\": \"application/json\"\n      }],\n      \"body\": {\n        \"mode\": \"raw\",\n        \"raw\": \"{\\\"text\\\":\\\"Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...\\\"}\"\n      }\n    }\n  }]\n}"
+            },
+            "url": {
+              "raw": "https://postman-echo.com/transform/collection?from=2&to=1",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "transform",
+                "collection"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "2"
+                },
+                {
+                  "key": "to",
+                  "value": "1"
+                }
+              ]
             },
             "description": ""
           },
@@ -3452,7 +3810,6 @@
               "id": "2483749-a5a669db-6b5f-89bb-62a0-6debe73f491f",
               "name": "Sample v1 Response",
               "originalRequest": {
-                "url": "https://postman-echo.com/transform/collection?from=2&to=1",
                 "method": "POST",
                 "header": [
                   {
@@ -3466,12 +3823,33 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"info\": {\n    \"name\": \"Sample Postman Collection\",\n    \"schema\": \"https://schema.getpostman.com/json/collection/v2.0.0/collection.json\",\n    \"description\": \"A sample collection to demonstrate collections as a set of related requests\"\n  },\n\n  \"item\": [{\n    \"name\": \"A simple GET request\",\n    \"event\": [{\n      \"listen\": \"test\",\n      \"script\": {\n        \"type\": \"text/javascript\",\n        \"exec\": [\"tests['response code is 200'] = (responseCode.code === 200);\"]\n      }\n    }],\n    \"request\": {\n      \"url\": \"https://postman-echo.com/get?source=newman-sample-github-collection\",\n      \"method\": \"GET\"\n    }\n  }, {\n    \"name\": \"A simple POST request\",\n    \"request\": {\n      \"url\": \"https://postman-echo.com/post\",\n      \"method\": \"POST\",\n      \"header\": [{\n        \"key\": \"Content-Type\",\n        \"value\": \"text/plain\"\n      }],\n      \"body\": {\n        \"mode\": \"raw\",\n        \"raw\": \"Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...\"\n      }\n    }\n  }, {\n    \"name\": \"A simple POST request with JSON body\",\n    \"request\": {\n      \"url\": \"https://postman-echo.com/post\",\n      \"method\": \"POST\",\n      \"header\": [{\n        \"key\": \"Content-Type\",\n        \"value\": \"application/json\"\n      }],\n      \"body\": {\n        \"mode\": \"raw\",\n        \"raw\": \"{\\\"text\\\":\\\"Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...\\\"}\"\n      }\n    }\n  }]\n}"
+                },
+                "url": {
+                  "raw": "https://postman-echo.com/transform/collection?from=2&to=1",
+                  "protocol": "https",
+                  "host": [
+                    "postman-echo",
+                    "com"
+                  ],
+                  "path": [
+                    "transform",
+                    "collection"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "2"
+                    },
+                    {
+                      "key": "to",
+                      "value": "1"
+                    }
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
               "header": [
                 {
                   "key": "Access-Control-Allow-Credentials",
