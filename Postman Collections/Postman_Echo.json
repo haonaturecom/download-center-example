@@ -1512,11 +1512,11 @@
               "query": [
                 {
                   "key": "foo1",
-                  "value": null
+                  "value": ""
                 },
                 {
                   "key": "foo2",
-                  "value": null
+                  "value": ""
                 }
               ]
             },
