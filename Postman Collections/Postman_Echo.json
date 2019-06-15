@@ -1170,6 +1170,34 @@
             "description": "haonature.com"
           },
           "response": []
+        },
+        {
+          "name": "www.haonature.com",
+          "_postman_id": "2483749-4614f9fb-0df5-4880-a0ea-480e22e950f3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "haonature.com",
+            "description": "haonature.com\n"
+          },
+          "response": []
+        },
+        {
+          "name": "www.haonature.com",
+          "_postman_id": "2483749-835e8251-bbc4-4b65-9d04-7fb7deb2a2b2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "haonature.com",
+            "description": "www.haonature.com"
+          },
+          "response": []
         }
       ],
       "_postman_id": "2483749-df815c41-a76b-4b5b-7129-ea59275f254b"
