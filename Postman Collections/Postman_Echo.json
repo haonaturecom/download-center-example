@@ -1198,6 +1198,20 @@
             "description": "www.haonature.com"
           },
           "response": []
+        },
+        {
+          "name": "haonature.com",
+          "_postman_id": "2483749-5994ca49-528b-4610-90fe-69b1213712cc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "www.haonature.com",
+            "description": "haonature.com"
+          },
+          "response": []
         }
       ],
       "_postman_id": "2483749-df815c41-a76b-4b5b-7129-ea59275f254b"
